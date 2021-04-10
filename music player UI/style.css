@@ -1,0 +1,90 @@
+body {
+  font-family: system-ui;
+  background: grey;
+  text-align: center;
+  align-item: center;
+}
+
+.player {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: content;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: content;
+}
+
+.now-playing {
+  padding-top: 20px;
+  font-size: 1.5rem;
+  color: darkgrey;
+}
+
+.track-picture {
+  padding: 20px;
+}
+
+.track-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.track-artist {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 5px;
+  padding-bottom: 25px;
+}
+
+.track-progress {
+  height: 5px;
+  width: 330px;
+  background-color: darkgrey;
+  padding: 0px;
+}
+
+.progress-bar {
+  height: 5px;
+  width: 100px;
+  background-color: white;
+  padding: 0px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.play-button {
+  padding-top: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 50%;
+}
+
+.prev-button, .next-button {
+  padding: 25px;
+  opacity: 0.8;
+}
+
+.play-button:hover {
+  background-color: darkgrey;
+}
+
+.prev-button:hover, .next-button:hover {
+  opacity: 1.0;
+}
