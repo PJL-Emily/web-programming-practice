@@ -32,7 +32,7 @@ body {
 
 .image-viewer__button {
 	display: inline;
-	background: none;
+	background-image: ./images/back.png;
 	border: none;
 	border-radius: 50%;
 }
@@ -54,6 +54,11 @@ body {
 	outline: none;
 }
 
+.image-viewer__button:disabled img {
+	opacity: 0.2;
+	border-color: transparent !important;
+	cursor: not-allowed;
+}
 
 .image-viewer__display {
 	position: relative;
@@ -90,11 +95,3 @@ body {
 	color: black;
 }
 
-.disabled {
-	opacity: 0.2;
-}
-
-.disabled:hover {
-	border-color: transparent !important;
-	cursor: not-allowed;
-}

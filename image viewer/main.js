@@ -13,22 +13,34 @@ display.src = pics[picnum];
 prev_button.addEventListener(
 	"click", function() {
 		console.log("prev");
-		if (picnum == 0) {
-			alert("no previous image");
-			return 0;
-		}
+		prev_button.disabled = picnum <= 1? true: false;
 		picnum--;
 		display.src = pics[picnum];
+		console.log(picnum);
+		next_button.disabled = picnum < pics.length - 1? false: true;
 	}
 );
+
+// function previousImage() {
+// 	console.log("prev");
+// 	console.log(picnum);
+// 	if (picnum <= 1) {
+// 		prev_button.disabled = true;
+// 	} else {
+// 		prev_button.disabled = false;
+// 	}
+// 	console.log(prev_button.disabled);
+// 	picnum--;
+// 	display.src = pics[picnum];
+// }
+
 next_button.addEventListener(
 	"click", function() {
 		console.log("next");
-		if (picnum == pics.length-1) {
-			alert("last image");
-			return 0;
-		}
+		next_button.disabled = picnum < pics.length - 2? false: true;
 		picnum++;
 		display.src = pics[picnum];
+		console.log(picnum);
+		prev_button.disabled = picnum < 1? true: false;
 	}
 );
